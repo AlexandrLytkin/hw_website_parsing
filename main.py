@@ -25,7 +25,7 @@ def write_cmc_top():
     data_file_name = datetime.datetime.now().strftime("%H.%M. %d.%m.%Y") + '.csv'
     with open(data_file_name, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter=' ')
-        writer.writerow(['Name', 'Market capitalization', 'Market percentage'])
+        writer.writerow(['Name', 'MC', 'MP'])
         count = 0
         for row in range(len(all_types)):
             writer.writerow([all_types[count], coast[count], f'{round(int_coast[count] / sum(int_coast) * 100)}%'])
